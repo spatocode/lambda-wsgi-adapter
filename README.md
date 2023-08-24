@@ -1,4 +1,4 @@
-# lambda-wsgi-adapter  ![version](https://img.shields.io/pypi/v/lambda-wsgi-adapter) ![downloads](https://img.shields.io/pypi/dm/lambda-wsgi-adapter) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![issues](https://img.shields.io/github/issues/spatocode/lambda-wsgi-adapter) ![build](https://img.shields.io/travis/spatocode/lambda-wsgi-adapter)
+# lambda-wsgi-adapter  ![version](https://img.shields.io/pypi/v/lambda-wsgi-adapter) ![downloads](https://img.shields.io/pypi/dm/lambda-wsgi-adapter) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![issues](https://img.shields.io/github/issues/spatocode/lambda-wsgi-adapter)
 
 WSGI adapter for AWS Lambda
 
@@ -14,6 +14,7 @@ $ pip install lambda-wsgi-adapter
 
 ```py
 from wsgi_adapter import LambdaWSGIHandler
+from django_project.wsgi import application
 
 def lambda_handler(event, context):
     handler = LambdaWSGIHandler(application)
@@ -21,7 +22,7 @@ def lambda_handler(event, context):
 ```
 
 
-# LICENSE
+# License
 
 [MIT License](http://www.github.com/spatocode/lambda-wsgi-adapter/blob/master/LICENSE)
 
