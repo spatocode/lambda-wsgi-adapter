@@ -16,7 +16,7 @@ class LambdaWSGIHandler:
         return response(event)
 
     def create_wsgi_environment(self, event, context):
-        body = event.get("body", "")
+        body = event.get("body", "") or ""
         if event.get("isBase64Encoded", False):
             body = base64.b64decode(body)
         elif isinstance(body, str):
@@ -38,7 +38,7 @@ class LambdaWSGIHandler:
             "SERVER_PORT": "",
             "PATH_INFO": event.get("path"),
             "REQUEST_METHOD": event.get("httpMethod"),
-            "QUERY_STRING": urlencode(event.get("queryStringParameters", {})),
+            "QUERY_STRING": urlencode(event.get("queryStringParameters", {}) or {}),
             "CONTENT_LENGTH": str(len(body)),
             "lambda.context": context,
             "lambda.event": event
