@@ -8,7 +8,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="lambda-wsgi-adapter",
-    version="0.1.0",
+    version="0.1.1",
     author="Ekene Izukanne",
     author_email="ekeneizukanne@gmail.com",
     description="WSGI adapter for AWS Lambda",
